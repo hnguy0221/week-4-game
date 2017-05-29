@@ -43,40 +43,37 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-xs-1 col-md-1 col-lg-1">
-                <div class="random-number-box">
-                </div>
-                <div class="results">
-                    <div id="msg"></div>
-                    <div id="win"></div>
-                    <div id="lose"></div>
-                </div>
+            <div class="random-number-box">
+            </div>
+            <div class="results">
+                <div id="msg"></div>
+                <div id="win"></div>
+                <div id="lose"></div>
             </div>
         </div>
         <div class="row">
-            <div class="col-xs-12 col-md-12 col-lg-12">
-                <div class="buttons-box">
-                    <button type="button" class="btn btn-default" id="button-1">
-                        <img src="assets/images/crystal1.jpg" id="img-1" />
-                    </button>
-                    <button type="button" class="btn btn-default" id="button-2">
-                        <img src="assets/images/crystal2.jpg" id="img-2" />
-                    </button>
-                    <button type="button" class="btn btn-default" id="button-3">
-                        <img src="assets/images/crystal3.jpg" id="img-3" />
-                    </button>
-                    <button type="button" class="btn btn-default" id="button-4">
-                        <img src="assets/images/crystal4.jpg" id="img-4" />
-                    </button>
-                </div>
+            <div class="buttons-box">
+                <button type="button" class="btn btn-default" id="button-1">
+                    <img src="assets/images/crystal1.jpg" id="img-1" />
+                </button>
+            
+                <button type="button" class="btn btn-default" id=button-2>
+                    <img src="assets/images/crystal2.jpg" id="img-2" />
+                </button>
+            
+                <button type="button" class="btn btn-default" id=button-3>
+                    <img src="assets/images/crystal3.jpg" id="img-3" />
+                </button>
+            
+                <button type="button" class="btn btn-default" id=button-4>
+                    <img src="assets/images/crystal4.jpg" id="img-4" />
+                </button>
             </div>
         </div>
         <div class="row">
             <div class="total-score-box-1">
                 <p class="total-score">Your total score is:</p>
             </div>
-        </div>
-        <div class="row">
             <div class="total-score-box-2">
             </div>
         </div>

@@ -32,7 +32,15 @@ $(document).ready(function()
     var msg = null;
     var winFl = false;
     var loseFl = false;
-
+    
+    //============================================================================
+    // Name        : getRandomNumber
+    // Author      : Hai Nguyen
+    // Version     :
+    // Copyright   : 2017
+    // Description : This function calculates the random number between the 
+    //               minimum and maximum values.
+    //============================================================================
     function getRandomNumber(min, max)
     {
         var retVal = 0;
@@ -45,6 +53,15 @@ $(document).ready(function()
         return retVal;
     }
 
+    //============================================================================
+    // Name        : generateImgRandomNumsArr
+    // Author      : Hai Nguyen
+    // Version     :
+    // Copyright   : 2017
+    // Description : This function calls the getRandomNumber() to calculate the 
+    //               random number between the minimum and maximum values for each
+    //               element of the crystals array.
+    //============================================================================
     function generateImgRandomNumsArr(min, max)
     {
     	for (var i = 0; i < MAX; i++)
@@ -53,6 +70,17 @@ $(document).ready(function()
     	}
     }
 
+    //============================================================================
+    // Name        : setUp
+    // Author      : Hai Nguyen
+    // Version     :
+    // Copyright   : 2017
+    // Description : This function calls the getRandomNumber() to generate a 
+    //               random number between 19 and 120, then call the 
+    //               generateImgRandomNumsArr() to generate a random number 
+    //               between 1 and 12 and set set each value of the crystals to the
+    //               random generated number between 1 and 12.
+    //============================================================================
     function setUp()
     {
         randomNum = getRandomNumber(19, 120);
@@ -72,12 +100,21 @@ $(document).ready(function()
         }
     }
 
+    //============================================================================
+    // Name        : revealandSetUp
+    // Author      : Hai Nguyen
+    // Version     :
+    // Copyright   : 2017
+    // Description : This function calls the setUp() function to generate the
+    //               game random number and the random number for each crystal
+    //               needed to play the game.
+    //============================================================================
     function revealAndSetup()
     {
         var msg = "";
 
         //reveal the total score (0 initially) to total score box 
-        $(".total-score-box-2").html(totalScore).css({"font-size": "20px", "padding-top": "5px", "padding-left": "2px"}); 
+        $(".total-score-box-2").html(totalScore); 
         
         //display "You win!" or "You lose!" message
         var p1 = $("<p>");
@@ -96,25 +133,25 @@ $(document).ready(function()
             msg = "";
         }
         p1.text(msg);
-        $("#msg").html(p1).css({"font-size": "12px", "padding-top": "5px"});
+        $("#msg").html(p1).css({"font-size": "13px", "padding-bottom": "6px"});
 
         //display number of wins
         var p2 = $("<p>");
         var tmpStr = "Wins: " + wins;
         p2.text(tmpStr);
-        $("#win").html(p2).css({"font-size": "12px", "padding-top": "5px"});
+        $("#win").html(p2).css({"font-size": "13px"});
 
         //display number of losses
         var p3 = $("<p>");
         var tmpStr = "Losses: " + losses;
         p3.text(tmpStr);
-        $("#lose").html(p3).css({"font-size": "12px", "padding-top": "5px"});
+        $("#lose").html(p3).css({"font-size": "13px"});
    
         //generate random numbers
         setUp();
 
         //reveal the game random number
-	    $(".random-number-box").html(randomNum).css({"font-size": "20px", "padding-top": "5px", "padding-left": "2px"});
+        $(".random-number-box").html(randomNum);
     }
 
     revealAndSetup();
@@ -126,7 +163,7 @@ $(document).ready(function()
         totalScore += tmpTotalScore; 
         console.log("totalScore: ", totalScore);
         //reveal the total score to total score box
-        $(".total-score-box-2").html(totalScore).css({"font-size": "20px", "padding-top": "5px", "padding-left": "2px"});
+        $(".total-score-box-2").html(totalScore);
         if (totalScore > randomNum)
         {
             losses++;
